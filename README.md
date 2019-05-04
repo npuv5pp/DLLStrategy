@@ -10,9 +10,9 @@ The new interface functions include:
 
 - `void GetTeamInfo(TeamInfo* teaminfo)`
 
-  Used to specify policy information, currently contains the team name field.
+  Used to specify strategy information, currently contains the team name field.
 
-  The parameter `TeamInfo* teaminfo`** requires the policy to populate its own information**, which will be returned to the platform.
+  The parameter `TeamInfo* teaminfo`** requires the strategy to populate its own information**, which will be returned to the platform.
 
 - `void GetInstruction(Field* field)`
 
