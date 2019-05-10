@@ -29,14 +29,14 @@ void GetTeamInfo(TeamInfo* teamInfo) {
 
 void GetInstruction(Field* field) {
 	SendLog(L"V/DLLStrategy:GetInstruction()");
-	for (auto& r : field->ourRobots) {
+	for (auto& r : field->selfRobots) {
 		r.wheel = { 125,-125 };
 	}
 }
 
 void GetPlacement(Field* field) {
 	SendLog(L"V/DLLStrategy:GetPlacement()");
-	for (auto& r : field->ourRobots) {
+	for (auto& r : field->selfRobots) {
 		r.position = { 42,42 };
 		r.rotation = 180;
 	}

@@ -14,21 +14,19 @@ namespace Simuro {
 
 	enum JudgeType
 	{
-		NormalMatch = 0,
-		EndGame = 1,
-		PlaceKick = 2,
-		GoalKick = 3,
-		PenaltyKick = 4,
-		FreeKickRightTop = 5,
-		FreeKickRightBot = 6,
-		FreeKickLeftTop = 7,
-		FreeKickLeftBot = 8,
+		PlaceKick = 0,
+		GoalKick = 1,
+		PenaltyKick = 2,
+		FreeKickRightTop = 3,
+		FreeKickRightBot = 4,
+		FreeKickLeftTop = 5,
+		FreeKickLeftBot = 6,
 	};
 
-	enum Side
+	enum Team
 	{
-		Yellow,
-		Blue,
+		Self,
+		Opponent,
 		None,
 	};
 
@@ -57,7 +55,7 @@ namespace Simuro {
 	};
 
 	struct Field {
-		Robot ourRobots[PLAYERS_PER_SIDE];
+		Robot selfRobots[PLAYERS_PER_SIDE];
 		Robot opponentRobots[PLAYERS_PER_SIDE];
 		Ball ball;
 		int32_t tick;
@@ -65,7 +63,7 @@ namespace Simuro {
 
 	struct JudgeResultEvent {
 		JudgeType type;
-		Side actor;
+		Team actor;
 		wchar_t reason[MAX_STRING_LEN];
 	};
 }
