@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <cstdint>
 
 namespace Simuro {
@@ -10,6 +10,10 @@ namespace Simuro {
 		JudgeResult = 0,
 		MatchStart = 1,
 		MatchStop = 2,
+		FirstHalfStart = 3,
+		SecondHalfStart = 4,
+		OvertimeStart = 5,
+		PenaltyShootoutStart = 6,
 	};
 
 	enum JudgeType

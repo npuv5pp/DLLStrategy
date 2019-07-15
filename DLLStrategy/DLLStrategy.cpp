@@ -11,12 +11,45 @@ using namespace Adapter;
 void OnEvent(EventType type, void* argument) {
 	SendLog(L"V/DLLStrategy:OnEvent()");
 	switch (type) {
+	case EventType::FirstHalfStart: {
+		SendLog(L"First Half Start");
+		break;
+	}
+	case EventType::SecondHalfStart: {
+		SendLog(L"Second Half Start");
+		break;
+	}
+	case EventType::OvertimeStart: {
+		SendLog(L"Overtime Start");
+		break;
+	}
+	case EventType::PenaltyShootoutStart: {
+		SendLog(L"Penalty Shootout Start");
+		break;
+	}
 	case EventType::JudgeResult: {
 		JudgeResultEvent* judgeResult = static_cast<JudgeResultEvent*>(argument);
+		switch (judgeResult->type) {
+		case JudgeType::PlaceKick:
+			SendLog(L"Place Kick");
+			break;
+		case JudgeType::PenaltyKick:
+			SendLog(L"Penalty Kick");
+			break;
+		case JudgeType::GoalKick:
+			SendLog(L"Goal Kick");
+			break;
+		case JudgeType::FreeKickLeftBot:
+		case JudgeType::FreeKickLeftTop:
+		case JudgeType::FreeKickRightBot:
+		case JudgeType::FreeKickRightTop:
+			SendLog(L"Free Kick");
+			break;
+		}
 		break;
 	}
 	default:
-		;
+		break;
 	}
 }
 
