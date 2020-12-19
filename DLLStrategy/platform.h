@@ -65,6 +65,11 @@ namespace Simuro {
 		int32_t tick;
 	};
 
+	enum class ControlInfo {
+		Continue = 0,
+		Reset = 1,
+	};
+
 	struct JudgeResultEvent {
 		JudgeType type;
 		Team actor;

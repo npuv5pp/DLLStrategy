@@ -4,3 +4,4 @@ OnEvent
 GetTeamInfo
 GetInstruction
 GetPlacement
+GetControlInfo

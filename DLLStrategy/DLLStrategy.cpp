@@ -74,3 +74,7 @@ void GetPlacement(Field* field) {
 		r.rotation = 180;
 	}
 }
+
+void GetControlInfo(ControlInfo* controlInfo) {
+	*controlInfo = ControlInfo::Continue;
+}
