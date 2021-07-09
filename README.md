@@ -1,3 +1,4 @@
+[Chinese](https://github.com/npuv5pp/DLLStrategy/blob/master/README_zh.md)
 # DLLStrategy
 
 Template project for DLL strategy.
